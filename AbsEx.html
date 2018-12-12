@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAT2FIT</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+<div data-role="page" id="absEx">
+    <div data-role="header" data-position="fixed">
+        <a href="myDay.html" data-role="button" data-icon="back" class="ui-btn-left">back to my day</a>
+        <h1>Abs exercises</h1>
+    </div>
+    <div data-role="content">
+        <form id="AbsExForm" method="get" action="serverSide">
+        <table border="1">
+            <tr>
+                <td>Exercise</td>
+                <td>Sets</td>
+                <td>Reps</td>
+            </tr>
+            <tr>
+                <td>crunch</td>
+                <td><input type="number" id="set1"/></td>
+                <td><input type="number" id="reps1"/></td>
+            </tr>
+            <tr>
+                <td>plank</td>
+                <td><input type="number" id="set2"/></td>
+                <td><input type="number" id="reps2"/></td>
+            </tr>
+        </table>
+            <input type="submit" id="submit" value="Add"/>
+        </form>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h3>FAT2FIT</h3>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>FAT2FIT</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+    .input-text
+    {
+    width: 500px;
+    height:150px;
+    }
+    </style>
+</head>
+<body>
+
+
+<div data-role="page" id="message">
+    <div data-role="header" data-position="fixed">
+        <a href="Home.html" data-role="button" data-icon="back" class="ui-btn-left">back to home</a>
+
+        <h1>My messages</h1>
+    </div>
+
+
+    <div data-role="content">
+        <form id="messageToAdmin" method="get" action="serverSide">
+            <div data-role="fieldcontain">
+                <label>send message to director of the gym:
+                    <textarea  rows="15" name="content" style="width: 600px; height: 00px" form="messageToAdmin"></textarea>
+
+                    <input type="submit" name="" id="send" value="send" data-inline="true"/>
+                </label>
+
+
+            </div>
+        </form>
+        <label>message from director of the gym</label>
+        <div  id="textFromTheAdmin" data-role="fieldcontain">
+
+
+
+
+        </div>
+
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h3>FAT2FIT</h3>
+    </div>
+
+</div>
+</body>
+</html>
