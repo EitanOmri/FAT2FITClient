@@ -14,25 +14,35 @@
         <a href="myDay.html" data-role="button" data-icon="back" class="ui-btn-left">back to my day</a>
         <h1>Abs exercises</h1>
     </div>
-    <div data-role="content">
+    <div data-role="content" style="height: 1000px;">
         <form id="AbsExForm" method="get" action="serverSide">
-        <table border="1">
-            <tr>
-                <td>Exercise</td>
-                <td>Sets</td>
-                <td>Reps</td>
-            </tr>
-            <tr>
-                <td>crunch</td>
-                <td><input type="number" id="set1"/></td>
-                <td><input type="number" id="reps1"/></td>
-            </tr>
-            <tr>
-                <td>plank</td>
-                <td><input type="number" id="set2"/></td>
+            <table data-role="table" id="table-column-toggle"  class="ui-responsive table-stroke" style="font-size: xx-large">
+                     <thead>
+                   <tr>
+                         <th data-priority="10">Exercise</th>
+                       
+                         <th data-priority="3">Sets</th>
+                       
+                         <th data-priority="5">Reps</th>
+                       </tr>
+                 </thead>
+                     <tbody>
+                   <tr>
+                         <th>crunch</th>
+                         <td><input type="number" id="set1"/></td>
+                         
+                        <td><input type="number" id="reps1"/></td>
+                       </tr>
+                   <tr>
+                         <th>plank</th>
+                         <td><input type="number" id="set2"/></td>
                 <td><input type="number" id="reps2"/></td>
-            </tr>
-        </table>
+                       </tr>
+                  
+                   
+                 </tbody>
+                   </table>
+
             <input type="submit" id="submit" value="Add"/>
         </form>
     </div>
