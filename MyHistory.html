@@ -9,50 +9,61 @@
 
 </head>
 <body>
-<div data-role="page" id="absEx">
+<div data-role="page" id="myHistory">
     <div data-role="header" data-position="fixed">
-        <a href="myDay.html" data-role="button" data-icon="back" class="ui-btn-left">back to my day</a>
-        <h1>Abs exercises</h1>
+        <a href="Home.html" data-role="button" data-icon="back" class="ui-btn-left">back to home</a>
+
+        <h1>My history</h1>
     </div>
-    <div data-role="content" style="height: 1000px;">
-        <form id="AbsExForm" method="get" action="serverSide">
+    <div data-role="content">
+
+
             <table data-role="table" id="table-column-toggle"  class="ui-responsive table-stroke" style="font-size: xx-large">
                      <thead>
                    <tr>
-                       
+                 <th data-priority="10">Date</th>
+
                          <th data-priority="10">Exercise</th>
                        
                          <th data-priority="3">Sets</th>
                        
                          <th data-priority="5">Reps</th>
-                       
+                 <th data-priority="5">Edit/Delete</th>
+
                        </tr>
                  </thead>
                      <tbody>
                    <tr>
+                <th>16/4/2018</th>
 
                          <th>crunch</th>
-                         <td><input type="number" id="set1"/></td>
+                         <td>10</td>
                          
-                        <td><input type="number" id="reps1"/></td>
-                       
+                        <td>8</td>
+                 <td><a href="Edit.html" data-role="button" data-rel="dialog" data-transition="pop">Edit/Delete</a></td>
+
                        </tr>
                    <tr>
+                <th>16/3/2018</th>
+
                          <th>plank</th>
-                         <td><input type="number" id="set2"/></td>
-                <td><input type="number" id="reps2"/></td>
+                         <td>5</td>
+                <td>10</td>
+                 <td><a href="Edit.html" data-role="button" data-rel="dialog" data-transition="pop">Edit/Delete</a></td>
+
                        </tr>
                   
                    
                  </tbody>
                    </table>
 
-            <input type="submit" id="submit" value="Add"/>
-        </form>
+
     </div>
     <div data-role="footer" data-position="fixed">
         <h3>FAT2FIT</h3>
     </div>
 </div>
+
+
 </body>
 </html>
