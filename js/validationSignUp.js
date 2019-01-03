@@ -9,63 +9,63 @@ function validation() {
     const height = document.signup.height.value;
     const weight = document.signup.weight.value;
     var flag=true;
-    if (username === "") {
-        document.getElementById("usernameValid").innerHTML = "user name is empty, please put a username ";
+    if (username === '') {
+        document.getElementById('usernameValid').innerHTML = 'user name is empty, please put a username ';
         flag= false;
     }
     if (document.signup.checkbox.checked===false) {
-        alert("you must agree to our terms");
+        alert('you must agree to our terms');
         flag= false;
     }
-    if (firstname === "") {
-        document.getElementById("firstnameValid").innerHTML = "first name is empty, please put a first name ";
-        flag= false;
-
-    }
-    if (lastname === "") {
-        document.getElementById("lastnameValid").innerHTML = "last name is empty, please put a last name ";
+    if (firstname === '') {
+        document.getElementById('firstnameValid').innerHTML = 'first name is empty, please put a first name ';
         flag= false;
 
     }
-    if (email === "") {
-        document.getElementById("emailValid").innerHTML = "email is empty, please put an email ";
+    if (lastname === '') {
+        document.getElementById('lastnameValid').innerHTML = 'last name is empty, please put a last name ';
         flag= false;
 
     }
-    if (password === "") {
-        document.getElementById("passwordValid").innerHTML = "password is empty, please put a password ";
+    if (email === '') {
+        document.getElementById('emailValid').innerHTML = 'email is empty, please put an email ';
+        flag= false;
+
+    }
+    if (password === '') {
+        document.getElementById('passwordValid').innerHTML = 'password is empty, please put a password ';
         flag= false;
 
     }else {
         if (password.length<=5){
-            document.getElementById("passwordValid").innerHTML = "password is short, please choose a longer password ";
+            document.getElementById('passwordValid').innerHTML = 'password is short, please choose a longer password ';
             flag= false;
 
         }
     }
-    if (confirmpassword === "") {
-        document.getElementById("confirmpasswordValid").innerHTML = "confirm password is empty, please put a confirm password ";
+    if (confirmpassword === '') {
+        document.getElementById('confirmpasswordValid').innerHTML = 'confirm password is empty, please put a confirm password ';
         flag= false;
 
     }else {
         if (confirmpassword.localeCompare(password)) {
-            document.getElementById("confirmpasswordValid").innerHTML = "confirm password is not the same, please put a correct confirm password ";
+            document.getElementById('confirmpasswordValid').innerHTML = 'confirm password is not the same, please put a correct confirm password ';
             flag= false;
 
         }
     }
-    if (date === "") {
-        document.getElementById("birthdayValid").innerHTML = "birthday is empty, please put a birthday";
+    if (date === '') {
+        document.getElementById('birthdayValid').innerHTML = 'birthday is empty, please put a birthday';
         flag= false;
 
     }
-    if (height === "") {
-        document.getElementById("heightValid").innerHTML = "height is empty, please put a height";
+    if (height === '') {
+        document.getElementById('heightValid').innerHTML = 'height is empty, please put a height';
         flag= false;
 
     }
-    if (weight === "") {
-        document.getElementById("weightValid").innerHTML = "weight is empty, please put a height";
+    if (weight === '') {
+        document.getElementById('weightValid').innerHTML = 'weight is empty, please put a height';
         flag= false;
 
     }
@@ -73,8 +73,8 @@ return flag;
 }
 
 let request;
-if (navigator.appName === "Microsoft Internet Explorer") {
-    request = new ActiveXObject("Microsoft.XMLHTTP");
+if (navigator.appName === 'Microsoft Internet Explorer') {
+    request = new ActiveXObject('Microsoft.XMLHTTP');
 } else {
     request = new XMLHttpRequest();
 }
@@ -82,12 +82,12 @@ if (navigator.appName === "Microsoft Internet Explorer") {
 function isUserExist(username) {
 
     request.abort();
-    request.open("GET", "http://localhost:8080/controller/UserController/isExistUserName?userName=" + username, true);
+    request.open('GET', 'http://localhost:8080/controller/UserController/isExistUserName?userName=' + username, true);
     request.onreadystatechange = function () {
-        if (request.readyState === 4) {
-            let str = "";
-            if (request.responseText === "true") //the username already exist
-                str = "the username already exist";
+        if (request.readyState === 4 && request.status===200) {
+            let str = '';
+            if (request.responseText === 'true') //the username already exist
+                str = 'the username already exist';
             document.getElementById('usernameValid').innerHTML = str;
         }
     };
