@@ -74,7 +74,7 @@ if (navigator.appName === 'Microsoft Internet Explorer') {
 
 function isUserExist(username) {
     request.abort();
-    request.open('GET', 'http://localhost:8080/controller/UserController/isExistUserName?userName=' + username, true);
+    request.open('GET', 'http://10.0.2.2:8080/controller/UserController/isExistUserName?userName=' + username, true);
     request.onreadystatechange = function () {
         if (request.readyState === 4 && request.status === 200) {
             let str = '';
@@ -88,7 +88,7 @@ function isUserExist(username) {
 
 function isUserExistOnSubmit(username) {
     request.abort();
-    request.open('GET', 'http://localhost:8080/controller/UserController/isExistUserName?userName=' + username, true);
+    request.open('GET', 'http://10.0.2.2:8080/controller/UserController/isExistUserName?userName=' + username, true);
     let flag = false;
     request.onreadystatechange = function () {
         if (request.readyState === 4 && request.status === 200) {
