@@ -6,6 +6,9 @@ function validation() {
         document.getElementById('usernameValid').innerHTML = 'user name is empty, please put a username';
         flag = false;
     }
+    else {
+        document.getElementById('usernameValid').innerHTML = '';
+    }
     let answer=testLogInSubmit(username, password);
     if (answer === false) {
         document.getElementById('errorValid').innerHTML = 'user name or password is incorrect';
@@ -23,7 +26,6 @@ function validation() {
         }
         else{
             document.getElementById('passwordValid').innerHTML = '';
-
         }
     }
     return flag;
@@ -38,7 +40,7 @@ if (navigator.appName === 'Microsoft Internet Explorer') {
 
 function testLogInSubmit(username, password) {
     request.abort();
-    request.open('GET', 'http://localhost:8080/controller/UserController/testLogIn?userName=' + username + '&password=' + password, false);
+    request.open('GET', 'http://10.0.2.2:8080/controller/UserController/testLogIn?userName=' + username + '&password=' + password, false);
     let flag = true;
     request.onreadystatechange = function () {
         if (request.readyState === 4 && request.status === 200) {
@@ -49,5 +51,3 @@ function testLogInSubmit(username, password) {
     request.send(null);
     return flag;
 }
-
-
