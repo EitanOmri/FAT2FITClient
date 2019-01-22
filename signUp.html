@@ -12,59 +12,73 @@
 
 <div data-role="page" id="SignUp">
     <div data-role="header" data-position="fixed">
-        <a href="/FAT2FITClient/Login.html" rel="external" data-role="button" data-icon="back" class="ui-btn-left">back to Login</a>
+        <a href="/FAT2FITClient/login.html" rel="external" data-role="button" data-icon="back" class="ui-btn-left">back
+            to Login</a>
         <h1 style="color: black">Create your account</h1>
     </div>
     <div data-role="content" style="background: #d3d3d3">
         <form name="signup" method="post" action="//10.0.2.2:8080/controller/UserController/addUser"
               onsubmit="return validation()">
             <div data-role="fieldcontain">
+                <!--username-->
                 <label for="UserName" style="color: black; font-size: large">user name:</label>
-                <input type="text" name="UserName" id="UserName" placeholder="user name" value="" onkeyup="isUserExist(this.value)"/>
+                <input type="text" name="UserName" id="UserName" placeholder="user name" value=""
+                       onkeyup="isUserExist(this.value)"/>
                 <div id="usernameValid" style="color: #e9080d"></div>
             </div>
             <div data-role="fieldcontain">
+                <!--first Name-->
                 <label for="firstName" style="color: black; font-size: large"> first name:</label>
                 <input type="text" name="firstName" id="firstName" placeholder="first name" value=""/>
                 <div id="firstnameValid" style="color: #e9080d"></div>
 
             </div>
             <div data-role="fieldcontain">
+                <!--last Name-->
                 <label for="lastName" style="color: black; font-size: large">last name:</label>
                 <input type="text" name="lastName" id="lastName" placeholder="last name" value=""/>
                 <div id="lastnameValid" style="color: #e9080d"></div>
             </div>
             <div data-role="fieldcontain">
+                <!--email-->
                 <label for="email" style="color: black; font-size: large">e-mail:</label>
                 <input type="email" name="email" id="email" placeholder="e-mail" value=""/>
                 <div id="emailValid" style="color: #e9080d"></div>
             </div>
             <div data-role="fieldcontain">
+                <!--password-->
                 <label for="password" style="color: black; font-size: large">password:</label>
-                <input type="password" name="password" id="password" value="" placeholder="password" autocomplete="off"/>
+                <input type="password" name="password" id="password" value="" placeholder="password"
+                       autocomplete="off"/>
                 <div id="passwordValid" style="color: #e9080d"></div>
             </div>
             <div data-role="fieldcontain">
+                <!--re-password-->
                 <label for="password" style="color: black; font-size: medium">confirm password:</label>
-                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="confirm password" value="" autocomplete="off"/>
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="confirm password"
+                       value="" autocomplete="off"/>
                 <div id="confirmpasswordValid" style="color: #e9080d"></div>
             </div>
             <div data-role="fieldcontain" style="color: black; font-size: medium">
+                <!--birthday-->
                 <label for="birthday">birthday:</label>
                 <input type="date" name="birthday" id="birthday" value=""/>
                 <div id="birthdayValid" style="color: #e9080d"></div>
             </div>
             <div data-role="fieldcontain">
+                <!--height-->
                 <label for="height" style="color: black; font-size: large">height:</label>
                 <input type="number" name="height" id="height" placeholder="height" value=""/>
                 <div id="heightValid" style="color: #e9080d"></div>
             </div>
             <div data-role="fieldcontain">
+                <!--weight-->
                 <label for="weight" style="color: black; font-size: large">weight:</label>
                 <input type="number" name="weight" id="weight" placeholder="weight" value=""/>
                 <div id="weightValid" style="color: #e9080d"></div>
             </div>
             <fieldset data-role="controlgroup">
+                <!--EULA-->
                 <legend style="color: black; font-size: large">By Registering, you agree that you've read and accepted
                     our <a href="Check.html" data-rel="dialog" data-transition="pop">User Agreement,</a>
                     you're at least 18 years old, and you consent to our Privacy Notice and receiving marketing
@@ -76,7 +90,6 @@
             <div data-role="fieldcontain">
                 <input type="submit" name="submit" value="Sign Up"/>
             </div>
-
             <div data-role="footer" data-position="fixed">
                 <h3>FAT2FIT</h3>
             </div>

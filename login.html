@@ -12,6 +12,7 @@
     <script src="js/validationLogIn.js"></script>
 </head>
 <body>
+<!--login form-->
 <form name="login" class="form-login" method="post" action="//10.0.2.2:8080/controller/UserController/login" data-ajax="false"
       onsubmit="return validation();">
     <img class="mb-4" src="resources/IMG/gym.png" alt=""
@@ -29,7 +30,8 @@
     </div>
     <div id="errorValid" style="color: #e9080d"></div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-    <a href="SignUp.html" data-rel="dialog" data-transition="pop" data-ajax="false"
+    <!--register new member-->
+    <a href="signUp.html" data-rel="dialog" data-transition="pop" data-ajax="false"
        style="color: black; font-size: large;"> Don't have a FAT2FIT account? create
         yours now</a>
 </form>
