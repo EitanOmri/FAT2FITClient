@@ -39,7 +39,7 @@ if (navigator.appName === 'Microsoft Internet Explorer') {
 // checking if the username matching to the password in the DB
 function testLogInSubmit(username, password) {
     request.abort();
-    request.open('GET', 'http://10.0.2.2:8080/controller/UserController/testLogIn?userName=' + username + '&password=' + password, false);
+    request.open('GET', 'http://localhost:8080/controller/UserController/testLogIn?userName=' + username + '&password=' + password, false);
     let flag = true;
     request.onreadystatechange = function () {
         if (request.readyState === 4 && request.status === 200) {

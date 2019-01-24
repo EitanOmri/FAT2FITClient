@@ -74,7 +74,7 @@ if (navigator.appName === 'Microsoft Internet Explorer') {
 //in every key up we call this function and check if the username is exist in the DB
 function isUserExist(username) {
     request.abort();
-    request.open('GET', 'http://10.0.2.2:8080/controller/UserController/isExistUserName?userName=' + username, true);
+    request.open('GET', 'http://localhost:8080/controller/UserController/isExistUserName?userName=' + username, true);
     request.onreadystatechange = function () {
         if (request.readyState === 4 && request.status === 200) {
             let str = '';
@@ -89,7 +89,7 @@ function isUserExist(username) {
 //another checking if the username already exist, now when the user submit the form
 function isUserExistOnSubmit(username) {
     request.abort();
-    request.open('GET', 'http://10.0.2.2:8080/controller/UserController/isExistUserName?userName=' + username, true);
+    request.open('GET', 'http://localhost:8080/controller/UserController/isExistUserName?userName=' + username, true);
     let flag = false;
     request.onreadystatechange = function () {
         if (request.readyState === 4 && request.status === 200) {
